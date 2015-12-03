@@ -1,0 +1,16 @@
+
+
+
+<div ng-controller="taskDetailsCtrl">
+
+    <input type="checkbox" ng-checked="task.completed">
+    <div class="selected-{{task.completed}}">
+        <edit-directive>
+
+        </edit-directive>
+    </div>
+    <input type="button" ng-click="deleteTask(task)" value="delete">
+
+</div>
+
+

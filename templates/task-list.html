@@ -1,0 +1,29 @@
+<div ng-controller="taskListCtrl">
+
+    <!--
+<form  name="form" novalidate>
+    <input type="text" ng-model="candidateName">
+    <input type="button" ng-click="addCandidate(candidateName)" value="add">
+</form><br>
+
+-->
+
+
+    <div  ng-repeat="task in tasks">
+
+
+        <form >
+            <input type="checkbox" ng-click="strikeOutTask(task)" ng-checked="task.completed">
+
+
+            <!-- There must be a better way to implement this.
+            -->
+            <!--<del ng-show="candidate.placed"> {{candidate.name}}</del> -->
+            <div class="selected-{{task.completed}}">
+            <a href="#/task/{{task.objectId}}"> {{task.details}}</a>
+    </div>
+
+
+        </form>
+    </div>
+</div>

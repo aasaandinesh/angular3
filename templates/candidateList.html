@@ -1,0 +1,25 @@
+<div ng-controller="candidateListCtrl">
+
+    <!--
+<form  name="form" novalidate>
+    <input type="text" ng-model="candidateName">
+    <input type="button" ng-click="addCandidate(candidateName)" value="add">
+</form><br>
+
+-->
+{{candidate}}<br>
+
+<div  ng-repeat="candidate in candidates">
+
+    <form >
+        <input type="checkbox" ng-click="placeCandidate(candidate)">
+
+        <!-- There must be a better way to implement this.
+        -->
+        <!--<del ng-show="candidate.placed"> {{candidate.name}}</del> -->
+        <a href="#/candidate/{{$index}}"> {{candidate.name}}</a>
+
+
+    </form>
+</div>
+</div>

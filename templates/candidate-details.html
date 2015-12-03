@@ -1,0 +1,15 @@
+
+
+
+<form novalidate ng-controller="candidateDetailsCtrl">
+
+    <input type="text" name="name" ng-model="candidate.name">
+    <input type="text" name="interviewDate" ng-model="candidate.interviewDate.iso">
+    <input type="text" name="details" ng-model="candidate.details">
+    <input type="text" name="company" ng-model="candidate.company">
+
+    <input type="button" name="save" value="save" ng-click="editCandidate(candidate)">
+
+
+
+</form>
